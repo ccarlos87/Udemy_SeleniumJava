@@ -75,7 +75,7 @@ public class informacoesDoUsuarioTest {
 	}
 
 	@Test
-	public void removerUmContatoDeUsuario() {
+	public void testRemoverUmContatoDeUsuario() {
 		// Clicar no elemento pelo xpath:
 //		navegador.findElement(By.xpath("//span[text()='11234566566']/following-sibling::a")).click();
 		navegador.findElement(By.xpath("//div[@id='moredata']//ul/li[1]//following-sibling::a")).click();
@@ -86,9 +86,9 @@ public class informacoesDoUsuarioTest {
 		String mensagem = mensagemPop.getText();
 		assertEquals("Rest in peace, dear phone!", mensagem);
 		
-		
-		String screenshotArquivo = "C:/Users/calfredo/Desktop/Teste_SS/" + generator.dataHoraParaArquivo() + test.getMethodName() + ".png";
-		screenshot.tiraSS(navegador, screenshotArquivo);
+//		//tirando screenshot de evideoncia para a linha de código acima
+//		String screenshotArquivo = "C:/Users/calfredo/Desktop/Teste_SS/" + generator.dataHoraParaArquivo() + test.getMethodName() + ".png";
+//		screenshot.tiraSS(navegador, screenshotArquivo);
 
 		
 		
