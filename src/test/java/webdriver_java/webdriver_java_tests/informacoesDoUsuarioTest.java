@@ -58,7 +58,7 @@ public class informacoesDoUsuarioTest {
 	}
 
 	@Test
-	public void testAdicionarUmaInformacaoDoUsuario(@Param(name = "tipo") String tipo,
+	public void testAdicionarUmaInformacaoDoUsuario2(@Param(name = "tipo") String tipo,
 			@Param(name = "contato") String contato, @Param(name = "mensagem") String mensagemEsperada) {
 
 		// Clicar no botão através do seu xpath
