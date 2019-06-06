@@ -2,8 +2,6 @@ package webdriver_java.webdriver_java_tests;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.concurrent.TimeUnit;
-
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
@@ -16,11 +14,11 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import suporte.Web;
 import suporte.generator;
 import suporte.screenshot;
 
@@ -39,13 +37,8 @@ public class informacoesDoUsuarioTest {
 
 	@Before
 	public void setUp() {
-		// Setando as configurações para abrir o navegador
-		System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
-		navegador = new ChromeDriver();
-		// Setando o tempo de aguardo para as ações que possam ter timeout
-		navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		// abrindo o site
-		navegador.get("http://www.juliodelima.com.br/taskit/");
+		//chamada da classe Web que contém as configurações do broswer
+		navegador = Web.createChrome();
 
 		// clicando no botão de SignIn
 		navegador.findElement(By.linkText("Sign in")).click();
@@ -65,7 +58,8 @@ public class informacoesDoUsuarioTest {
 	}
 
 	@Test
-	public void testAdicionarUmaInformacaoDoUsuario(@Param(name = "tipo") String tipo,	@Param(name = "contato") String contato, @Param(name = "mensagem") String mensagemEsperada) {
+	public void testAdicionarUmaInformacaoDoUsuario(@Param(name = "tipo") String tipo,
+			@Param(name = "contato") String contato, @Param(name = "mensagem") String mensagemEsperada) {
 
 		// Clicar no botão através do seu xpath
 		navegador.findElement(By.xpath("//button[@data-target='addmoredata']")).click();

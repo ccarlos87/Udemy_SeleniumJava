@@ -1,4 +1,4 @@
-testAdicionarUmaInformacaoDoUsuario,tipo,contato,mensagem,Duration(ms)
-"",Phone,+55119787878780,Your contact has been added!,670.0
-"",Phone,+55119787878781,Your contact has been added!,674.0
-"",Phone,+55119787878782,Your contact has been added!,731.0
+testAdicionarUmaInformacaoDoUsuario,tipo,contato,mensagem
+								   ,Phone,+55119787878780,Your contact has been added!
+								   ,Phone,+55119787878781,Your contact has been added!
+								   ,Phone,+55119787878782,Your contact has been added!
